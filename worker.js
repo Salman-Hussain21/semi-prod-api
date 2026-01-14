@@ -1,3 +1,4 @@
+require('dotenv').config();
 const GameDig = require('gamedig');
 const axios = require('axios');
 const http = require('http');
@@ -9,7 +10,7 @@ const SERVERS = [
     { ip: '149.202.87.35', port: 27018, name: 'Deathmatch' }
 ];
 
-const API_URL = process.env.API_URL || 'http://localhost/dsgc/receive_data.php';
+const API_URL = process.env.API_URL || 'https://dstracker.mshstack.com/receive_data.php';
 const API_KEY = 'dsgamingtrackermshstack';
 const INTERVAL = 6 * 1000; // 6 seconds
 
